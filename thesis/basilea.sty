@@ -1,0 +1,318 @@
+%%
+%%  This file is originally based on 'ECSthesis.cls' by Steve R. Gunn
+%%  and 'phdthesis.sty' by Jamie Stevens. In this new version many parts
+%%  have been replaced by calls to the memoir package. Many existing
+%%  templates using the memoir served as model.
+%%
+%%  v.2.0
+%%
+%%  2014, Ivan Giangreco
+%%  2018, Arno Schneuwly
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{basilea}[2014]
+
+%\usepackage[outdir=./]{epstopdf}
+\usepackage[ngerman, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{newunicodechar}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsthm,bm}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{subcaption}
+\renewcommand{\thesubfigure}{\arabic{subfigure}}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{typearea}
+\usepackage{fancyhdr}
+\usepackage{bbm}
+\usepackage[switch, modulo]{lineno}
+\allowdisplaybreaks
+%\usepackage{xcolor}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+\usepackage{geometry}
+%\usepackage{natbib}
+%\usepackage[style=authoryear,maxnames=2]{biblatex}
+%\usepackage[authoryear]{natbib}
+%\usepackage[some]{background}
+
+%\SetBgScale{1}
+%\SetBgContents{\parbox{10cm}{%
+%  \Huge Draft:  \today\\[14cm]\rotatebox{180}{\Huge Draft:  \today}}}
+%\SetBgColor{gray}
+%\SetBgAngle{270}
+%\SetBgOpacity{0.2}
+\newcommand{\multrow}[1]{\begin{tabular}{@{}c@{}} #1 \end{tabular}}
+% text to be set for frontpage
+\newcommand*{\supervisor}[1]{\def\supervisorint{#1}}
+\newcommand*{\examiner}[1]{\def\examinerint{#1}}
+\newcommand*{\authors}[1]{\def\authorsint{#1}}
+\newcommand*{\email}[1]{\def\emailint{#1}}
+\newcommand*{\ulogo}[1]{\def\universitylogoint{#1}}
+\newcommand*{\department}[1]{\def\departmentint{#1}}
+\newcommand*{\faculty}[1]{\def\facultyint{#1}}
+\newcommand*{\research}[1]{\def\researchgroupint{#1}}
+\newcommand*{\thesistype}[1]{\def\thesistypeint{#1}}
+\newcommand*{\immatriculnr}[1]{\def\immatriculnrint{#1}}
+
+\def\titleint{\@title}
+\def\dateint{\@date}
+
+% settings for nomenclature (i.e. the abbreviations)
+% - for using in text use e.g. \nomenclature{LED}{Light-Emitting Diode}
+% this will print the text directly as Light-Emitting Diode (LED)
+% - the abbreviations for the whole document can be printed with the command \thesisnomencl
+% - invoke MakeIndex to create a *.nlo file (see also documentation of nomenclature package)
+\usepackage{nomencl}
+\newcommand*{\nomenclint}{}
+\let\nomenclint\nomenclature
+\renewcommand*{\nomenclature}[2]{\textit{#2} (#1) \nomenclint{#1}{#2}}
+\makenomenclature
+\newcommand*{\thesisnomencl}{\renewcommand{\nomname}{\iflanguage{english}{Abbreviations}{Abkürzungsverzeichnis}}\printnomenclature\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}}
+
+% graphics 
+% (see also floats section in this document for more options)
+\usepackage{eso-pic}
+\usepackage{everyshi}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{pdfpages}
+%\graphicspath{{Figures/}}
+\newsubfloat{figure}
+
+% definition of fonts (phv is Helvetica, pcr is Courrier)
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\ttdefault}{pcr}
+  
+% definition of colors
+\usepackage{color,graphicx}
+\definecolor{chaptercolor}{rgb}{.7,.7,.7}
+\definecolor{emphasizecolor}{rgb}{.7,.7,.7}
+
+% margins
+\setlrmarginsandblock{2.5cm}{2.5cm}{*}
+\setulmarginsandblock{2.5cm}{2.0cm}{*}
+\checkandfixthelayout
+
+% document organization
+\setsecnumdepth{subsubsection}
+\setcounter{tocdepth}{3}
+\newcounter{dummy}
+\newcommand\addtotoc[1]{
+\refstepcounter{dummy}
+\addcontentsline{toc}{chapter}{#1}}
+
+% definition of chapter style (i.e. large number and text)
+\setlength{\beforechapskip}{50pt}
+\setlength{\afterchapskip}{1pt}
+\newcommand*{\colorchapnumber}{\color{chaptercolor}}
+\newcommand*{\fontchapnumber}{\usefont{T1}{phv}{b}{n}\fontsize{100}{130}\selectfont}
+\newcommand*{\fontchaptitle}{\sffamily\bfseries\huge}
+\renewcommand*{\afterchapternum}{}
+\renewcommand*{\printchaptername}{}
+\setlength{\midchapskip}{20mm}
+\renewcommand*{\chapternamenum}{}
+\renewcommand*{\printchapternum}{\raggedleft{\colorchapnumber\fontchapnumber\thechapter}\par}
+\renewcommand*{\printchaptertitle}[1]{\raggedleft\fontchaptitle{#1}\par \vspace{30pt} \nobreak}
+
+% definition of (subsub)section styles
+\setsecheadstyle{\sffamily\Large}
+\setbeforesecskip{25pt}
+\setaftersecskip{1pt}
+
+\setsubsecheadstyle{\sffamily\large}
+\setbeforesubsecskip{20pt}
+\setaftersubsecskip{1pt}
+
+\setsubsubsecheadstyle{\sffamily\normalsize}
+\setbeforesubsubsecskip{20pt}
+\setaftersubsubsecskip{1pt}
+
+% definition of line spacing, indent of paragraph, etc.
+\OnehalfSpacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+% header, footer
+\nouppercaseheads
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+\makepagestyle{thesis}
+\makeevenhead{thesis}{\leftmark}{}{\thepage}
+\makeoddhead{thesis}{\leftmark}{}{\thepage}
+\makeheadrule{thesis}{\textwidth}{0.2pt}
+\makeevenfoot{thesis}{}{}{}
+\makeoddfoot{thesis}{}{}{}
+\copypagestyle{chapter}{empty}
+\makepagestyle{chapter}  % Redefine the 'chapter' page style
+\makeevenhead{chapter}{}{}{}  % No header on the first page of chapter
+\makeoddhead{chapter}{}{}{}
+\makeevenfoot{chapter}{}{}{\thepage}  % Add page number to bottom right
+\makeoddfoot{chapter}{}{}{\thepage}   % Add page number to bottom right
+
+% footnotes
+\setlength{\skip\footins}{20pt}
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{10pt}
+\usepackage{chngcntr} 
+\counterwithout{footnote}{chapter}
+
+% add highlighting possibilities
+% use \hlt to highlight parts of text, e.g. \hlt{this is important}
+\usepackage{soul}
+\newcommand{\hlt}[1]{\hl{#1}}
+
+% various imports
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm}
+
+% clearing pages
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\newcommand*{\tmpcleardoublepage}{}
+\let\tmpcleardoublepage\cleardoublepage
+
+% floats
+\captionstyle{\raggedright}
+\setfloatlocations{figure}{ht!}
+\setlength{\intextsep}{10pt}
+\setlength{\textfloatsep}{10pt}
+
+% definition of table of contents (i.e. title, header text, appearance in pdf-TOC, etc.)
+\newcommand*{\thesistoc}{\cleardoublepage\renewcommand*{\contentsname}{\iflanguage{english}{Table of Contents}{Inhaltsverzeichnis}} \createplainmark{toc}{both}{\iflanguage{english}{Table of Contents}{Inhaltsverzeichnis}} \currentpdfbookmark{\iflanguage{english}{Table of Contents}{Inhaltsverzeichnis}}{toc} \tableofcontents*}
+% adds the word "Appendix" in front of chapters in the appendix section
+\renewcommand*{\cftappendixname}{\iflanguage{english}{Appendix}{Anhang}\space}
+
+% definition of bibliography
+\usepackage[round]{natbib}
+\newcommand*{\thesisbib}{\cleardoublepage\renewcommand*{\contentsname}{\iflanguage{english}{Bibliography}{Literaturverzeichnis}} \createplainmark{bib}{both}{\iflanguage{english}{Bibliography}{Literaturverzeichnis}}\bibliographystyle{apalike}\bibliography{./references/references,./references/zotero,./references/custom}}
+
+
+% document structure
+\newcommand*{\thesisfront}{\frontmatter \let\cleardoublepage\clearpage }
+\newcommand*{\thesismain}{ \addtocontents{toc}{\vspace{2em}} \mainmatter \let\cleardoublepage\tmpcleardoublepage }
+\newcommand*{\thesisappendix}{ \addtocontents{toc}{\vspace{2em}} \appendix \let\cleardoublepage\clearpage}
+
+\newcommand*{\thesisback}{ \addtocontents{toc}{\vspace{2em}} \backmatter \let\cleardoublepage\clearpage}
+
+\newenvironment{alwayssingle}{%
+       \@restonecolfalse
+       \if@twocolumn\@restonecoltrue\onecolumn
+       \else\if@openright\cleardoublepage\else\clearpage\fi
+       \fi}%
+       {\if@restonecol\twocolumn
+       \else\newpage\thispagestyle{empty}\fi}
+
+% title page
+\renewcommand{\maketitle}{%
+%\BgThispage
+
+\begin{alwayssingle}\null
+    \renewcommand{\footnotesize}{\small}
+    \renewcommand{\footnoterule}{\relax}
+    \thispagestyle{empty}
+    \vspace{-80pt}
+  \begin{center}
+  \noindent\rule{\textwidth}{1pt}
+    { \Huge {\bfseries {Modelling the Effect of Heat Stress on the Performance of Swiss Dairy Cows \\ - \\ A Big Data Statistical Analysis}} \par}
+  \noindent\rule{\textwidth}{1pt}
+  \par
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./figures/logos/project_logo_signed.png}
+    %\caption{\phantom{Project Logo. Andreas Halter, June 2024.}}
+\end{figure}
+\vspace{-0.5cm}  
+    {{\huge \textbf{Arno Schneuwly} \\ \large \texttt{\href{mailto:aschneuwl@student.ethz.ch}{\nolinkurl{aschneuwl@student.ethz.ch}}}} \\(12-827-085) \par}
+\addcontentsline{lof}{figure}{\qquad \  Project Logo: Andreas Halter, June 2024.}
+\vspace{0.2cm}
+A thesis submitted in partial fulfillment of the requirements for the degree \\
+{\LARGE \textbf{Master of Science ETH in Agricultural Sciences\\}}
+
+\vspace{0.1cm}
+submitted on October 16, 2024 \\
+\textcolor{red}{post-submission revision - \today} \\
+\vspace{0.1cm}
+\begin{table*}[h]
+  \centering\begin{tabularx}{\linewidth}{YY}
+    \multicolumn{2}{c}{\includegraphics{./figures/logos/eth_logo_kurz_pos.eps}}\\
+    \multicolumn{2}{c}{Swiss Federal Institute of Technology Zurich}\\
+    \multicolumn{2}{c}{\includegraphics{./figures/logos/eth_dusys_logo_pos.eps}}\\
+    \multicolumn{2}{c}{Department of Environmental Systems Science}\\
+    \multicolumn{2}{c}{Institute of Agricultural Sciences}\\
+    \vspace{0.25cm} & \vspace{0.25cm} \\
+    \multicolumn{2}{c}{under the supervision of}\\
+            \vspace{0.2cm} & \vspace{0.2cm} \\
+    \multicolumn{2}{c}{Animal Nutrition Group}\\
+    \vspace{0.2cm} & \vspace{0.2cm} \\
+    \textbf{Prof. Dr. Mutian Niu} & \textbf{Dr. Usman Arshad}\\
+    \href{mailto:mutian.niu@ethz.ch}{\nolinkurl{mutian.niu@ethz.ch}} & \href{mailto:usman.arshad@ethz.ch}{\nolinkurl{usman.arshad@ethz.ch}} \\
+    
+  \end{tabularx}
+\end{table*}
+
+ \end{center}
+\end{alwayssingle}}
+
+% declaration
+\newcommand{\formlabel}[2]{\vspace{0.25cm}\textbf{\sffamily \footnotesize #1 --- #2}\\}
+
+% urls
+\usepackage{url}
+\urlstyle{same}
+
+% footnotes
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% reference settings
+\usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
+   bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
+   colorlinks,linkcolor={black},citecolor={blue},urlcolor={blue}, filecolor={black},
+   pdfstartview={FitV}, breaklinks=true, unicode]{hyperref}
+\usepackage[capitalize]{cleveref}
+
+% todos
+\usepackage[colorinlistoftodos]{todonotes} % add ",disable" in [] to remove all todos, missing figures and the todo list
+\newcommand\inlinetodo[1]{\textcolor{red}{\textbf{Todo}: #1}}
+\newcommand{\todoEmpty}[2][]{\todo[fancyline, #1]{#2}}
+\newcommand{\todoMissing}[2][]{\todoEmpty[color=magenta!80, linecolor=magenta!80, #1]{Missing: #2}}
+\newcommand{\todoCheck}[2][]{\todoEmpty[color=red!80, linecolor=red!80, #1]{Check: #2}}
+\newcommand{\todoRevise}[2][]{\todoEmpty[color=orange!80, linecolor=orange!80, #1]{Revise: #2}}
+\newcommand{\todoCitation}[2][]{\todoEmpty[color=yellow!80, linecolor=yellow!80, #1]{Citation: #2}}
+\newcommand{\todoLanguage}[2][]{\todoEmpty[color=blue!40!white, linecolor=blue!40!white, #1]{Language: #2}}
+\newcommand{\todoQuestion}[2][]{\todoEmpty[color=green!80!white, linecolor=green!80!white, #1]{Question: #2}}
+\newcommand{\todoNote}[2][]{\todoEmpty[color=black!20!white, linecolor=black!20!white, #1]{Note: #2}}
+\newcommand{\todoFigure}[5]{\begin{figure}[#1]\centering\missingfigure[figwidth=#2]{#3}\caption{#4}\label{#5}\end{figure}}
+
+\endinput
+
+%% End of file 'basilea.sty'

@@ -1,0 +1,749 @@
+\section{Original Braunvieh: Milk Yield}
+\subsection{Full Period: 1982-2023}\label{model:ob_milk_full}
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 14.6852 & 0.3830 & 38.3445 & $<$ 0.0001 \\ 
+      parityprimiparous & -2.8286 & 0.0084 & -336.8236 & $<$ 0.0001 \\ 
+      year1983 & 0.6430 & 0.2594 & 2.4790 & 0.0132 \\ 
+      year1984 & 1.3296 & 0.3594 & 3.6993 & 0.0002 \\ 
+      year1985 & 1.5697 & 0.4102 & 3.8268 & 0.0001 \\ 
+      year1986 & 1.3617 & 0.3971 & 3.4293 & 0.0006 \\ 
+      year1987 & 1.1349 & 0.3972 & 2.8571 & 0.0043 \\ 
+      year1988 & 1.0051 & 0.3962 & 2.5371 & 0.0112 \\ 
+      year1989 & 1.3474 & 0.3953 & 3.4086 & 0.0007 \\ 
+      year1990 & 1.5443 & 0.3969 & 3.8914 & 0.0001 \\ 
+      year1991 & 1.6956 & 0.3999 & 4.2405 & $<$ 0.0001 \\ 
+      year1992 & 1.8865 & 0.4044 & 4.6653 & $<$ 0.0001 \\ 
+      year1993 & 1.8705 & 0.4070 & 4.5959 & $<$ 0.0001 \\ 
+      year1994 & 1.9129 & 0.4062 & 4.7093 & $<$ 0.0001 \\ 
+      year1995 & 1.9594 & 0.4042 & 4.8482 & $<$ 0.0001 \\ 
+      year1996 & 1.9151 & 0.4050 & 4.7290 & $<$ 0.0001 \\ 
+      year1997 & 2.2722 & 0.4056 & 5.6027 & $<$ 0.0001 \\ 
+      year1998 & 2.6225 & 0.4121 & 6.3631 & $<$ 0.0001 \\ 
+      year1999 & 2.6031 & 0.4116 & 6.3245 & $<$ 0.0001 \\ 
+      year2000 & 2.7243 & 0.4104 & 6.6383 & $<$ 0.0001 \\ 
+      year2001 & 3.1854 & 0.4118 & 7.7345 & $<$ 0.0001 \\ 
+      year2002 & 3.1050 & 0.4136 & 7.5078 & $<$ 0.0001 \\ 
+      year2003 & 3.2604 & 0.4154 & 7.8494 & $<$ 0.0001 \\ 
+      year2004 & 3.9208 & 0.4166 & 9.4114 & $<$ 0.0001 \\ 
+      year2005 & 3.9771 & 0.4180 & 9.5156 & $<$ 0.0001 \\ 
+      year2006 & 3.9585 & 0.4097 & 9.6610 & $<$ 0.0001 \\ 
+      year2007 & 3.8381 & 0.4029 & 9.5267 & $<$ 0.0001 \\ 
+      year2008 & 3.9184 & 0.3984 & 9.8362 & $<$ 0.0001 \\ 
+      year2009 & 4.3397 & 0.3951 & 10.9831 & $<$ 0.0001 \\ 
+      year2010 & 4.3655 & 0.4169 & 10.4716 & $<$ 0.0001 \\ 
+      year2011 & 4.3907 & 0.4447 & 9.8727 & $<$ 0.0001 \\ 
+      year2012 & 4.4644 & 0.4182 & 10.6752 & $<$ 0.0001 \\ 
+      year2013 & 4.2845 & 0.4174 & 10.2637 & $<$ 0.0001 \\ 
+      year2014 & 4.5024 & 0.4132 & 10.8971 & $<$ 0.0001 \\ 
+      year2015 & 4.4539 & 0.4185 & 10.6419 & $<$ 0.0001 \\ 
+      year2016 & 4.7123 & 0.4123 & 11.4289 & $<$ 0.0001 \\ 
+      year2017 & 4.8402 & 0.4065 & 11.9066 & $<$ 0.0001 \\ 
+      year2018 & 5.3225 & 0.4063 & 13.0998 & $<$ 0.0001 \\ 
+      year2019 & 5.4832 & 0.4101 & 13.3688 & $<$ 0.0001 \\ 
+      year2020 & 5.5730 & 0.4091 & 13.6236 & $<$ 0.0001 \\ 
+      year2021 & 5.7938 & 0.4204 & 13.7827 & $<$ 0.0001 \\ 
+      year2022 & 5.6597 & 0.4127 & 13.7129 & $<$ 0.0001 \\ 
+      year2023 & 5.7643 & 0.3932 & 14.6596 & $<$ 0.0001 \\  
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 8.2023 & 8.2023 & 499.7521 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 6.4380 & 6.4380 & 21.1385 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 14.6571 & 14.6571 & 124999.1547 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 13.7950 & 13.7950 & 10008.9324 & $<$ 0.0001 \\  
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: Milk Yield - 1982-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & -0.1305 & 0.0684 & -1.91 & 0.0563\\
+s(thi\_mean\_t0\_3d):primiFx1 & -0.1859 & 0.1026 & -1.81 & 0.0699\\
+s(days\_in\_milk\_):multiFx1 & 2.6617 & 0.3795 & 7.01 & $<$ 1e-11\\
+s(days\_in\_milk\_):primiFx1 & 2.6704 & 0.6406 & 4.17 & $<$ 1e-04\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.2231 & & & \\
+$\sigma_\iota$ & 0.7988 & & & \\
+$\sigma_\phi$ & 2.2162 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.3315 & & & \\
+s(days\_in\_milk\_):primi & 7.6667 & & & \\
+s(days\_in\_milk\_):multi & 8.4641 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.0707 & & & \\
+Residual & 2.6754 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: Milk Yield - 1982-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_diagnostics.png}
+    \caption[]{Original Braunvieh: Milk Yield - 1982-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/ob_milk_full/ob_milk_full_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: Milk Yield - 1982 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsection{Split Period: Until 2010 - After 2010}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\subsubsection{Split Period: 1982 - 2010}\label{model:ob_milk_before}
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 15.0057 & 0.3198 & 46.9296 & $<$ 0.0001 \\ 
+      parityprimiparous & -2.7417 & 0.0075 & -364.2785 & $<$ 0.0001 \\ 
+      year1983 & 0.5319 & 0.1721 & 3.0909 & 0.0020 \\ 
+      year1984 & 1.2212 & 0.2208 & 5.5306 & $<$ 0.0001 \\ 
+      year1985 & 1.4377 & 0.3329 & 4.3192 & $<$ 0.0001 \\ 
+      year1986 & 1.2237 & 0.3282 & 3.7284 & 0.0002 \\ 
+      year1987 & 0.9991 & 0.3283 & 3.0434 & 0.0023 \\ 
+      year1988 & 0.8693 & 0.3296 & 2.6375 & 0.0084 \\ 
+      year1989 & 1.2663 & 0.3321 & 3.8124 & 0.0001 \\ 
+      year1990 & 1.4339 & 0.3365 & 4.2620 & $<$ 0.0001 \\ 
+      year1991 & 1.5848 & 0.3338 & 4.7480 & $<$ 0.0001 \\ 
+      year1992 & 1.8142 & 0.3368 & 5.3870 & $<$ 0.0001 \\ 
+      year1993 & 1.7912 & 0.3345 & 5.3554 & $<$ 0.0001 \\ 
+      year1994 & 1.8160 & 0.3363 & 5.3998 & $<$ 0.0001 \\ 
+      year1995 & 1.8604 & 0.3401 & 5.4700 & $<$ 0.0001 \\ 
+      year1996 & 1.8582 & 0.3422 & 5.4305 & $<$ 0.0001 \\ 
+      year1997 & 2.2074 & 0.3438 & 6.4205 & $<$ 0.0001 \\ 
+      year1998 & 2.5319 & 0.3440 & 7.3593 & $<$ 0.0001 \\ 
+      year1999 & 2.5909 & 0.3429 & 7.5555 & $<$ 0.0001 \\ 
+      year2000 & 2.6876 & 0.3428 & 7.8407 & $<$ 0.0001 \\ 
+      year2001 & 3.1647 & 0.3440 & 9.1995 & $<$ 0.0001 \\ 
+      year2002 & 3.1748 & 0.3440 & 9.2291 & $<$ 0.0001 \\ 
+      year2003 & 3.4029 & 0.3441 & 9.8881 & $<$ 0.0001 \\ 
+      year2004 & 4.0428 & 0.3451 & 11.7149 & $<$ 0.0001 \\ 
+      year2005 & 3.9998 & 0.3459 & 11.5618 & $<$ 0.0001 \\ 
+      year2006 & 4.0530 & 0.3459 & 11.7161 & $<$ 0.0001 \\ 
+      year2007 & 4.0568 & 0.3274 & 12.3917 & $<$ 0.0001 \\ 
+      year2008 & 4.2064 & 0.3305 & 12.7275 & $<$ 0.0001 \\ 
+      year2009 & 4.7048 & 0.3385 & 13.8992 & $<$ 0.0001 \\ 
+      year2010 & 4.7805 & 0.3304 & 14.4669 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 8.3658 & 8.3658 & 547.3637 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 6.3881 & 6.3881 & 18.3421 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 14.6588 & 14.6588 & 138414.9409 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 13.5087 & 13.5087 & 9624.2220 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: Milk Yield - 1982-2010 - GAMM model summary without random effect terms.}
+    \end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.1257 & 0.0623 & 2.02 & 0.0435\\
+s(thi\_mean\_t0\_3d):primiFx1 & 0.1133 & 0.0973 & 1.16 & 0.2441\\
+s(days\_in\_milk\_):multiFx1 & 1.6964 & 0.3555 & 4.77 & $<$ 1e-05\\
+s(days\_in\_milk\_):primiFx1 & 1.7743 & 0.6100 & 2.91 & 0.0036\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.0336 & & & \\
+$\sigma_\iota$ & 0.7981 & & & \\
+$\sigma_\phi$ & 2.1854 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.3954 & & & \\
+s(days\_in\_milk\_):primi & 6.5182 & & & \\
+s(days\_in\_milk\_):multi & 7.8722 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.0305 & & & \\
+Residual & 2.4831 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: Milk Yield - 1982-2010 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_diagnostics.png}
+    \caption[]{Original Braunvieh: Milk Yield - 1982-2010 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/ob_milk_before2010/ob_milk_before2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: Milk Yield - 1982 - 2010 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsubsection{Split Period: 2010 - 2023}\label{model:ob_milk_after}
+
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 17.9663 & 0.1239 & 144.9573 & $<$ 0.0001 \\ 
+      parityprimiparous & -2.8764 & 0.0124 & -231.5884 & $<$ 0.0001 \\ 
+      year2012 & 0.1449 & 0.1266 & 1.1447 & 0.2523 \\ 
+      year2013 & 0.0303 & 0.1310 & 0.2309 & 0.8174 \\ 
+      year2014 & 0.3805 & 0.1363 & 2.7924 & 0.0052 \\ 
+      year2015 & 0.3500 & 0.1331 & 2.6292 & 0.0086 \\ 
+      year2016 & 0.5339 & 0.1412 & 3.7823 & 0.0002 \\ 
+      year2017 & 0.7371 & 0.1440 & 5.1184 & $<$ 0.0001 \\ 
+      year2018 & 1.3158 & 0.1364 & 9.6455 & $<$ 0.0001 \\ 
+      year2019 & 1.4358 & 0.1278 & 11.2335 & $<$ 0.0001 \\ 
+      year2020 & 1.6108 & 0.1456 & 11.0653 & $<$ 0.0001 \\ 
+      year2021 & 1.7594 & 0.1381 & 12.7388 & $<$ 0.0001 \\ 
+      year2022 & 1.5487 & 0.1387 & 11.1677 & $<$ 0.0001 \\ 
+      year2023 & 1.7522 & 0.1237 & 14.1632 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 8.1325 & 8.1325 & 158.8789 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 5.8676 & 5.8676 & 31.1287 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 14.6080 & 14.6080 & 102220.3143 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 13.8345 & 13.8345 & 10900.9324 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: Milk Yield - 2011-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.1512 & 0.0805 & 1.88 & 0.0603\\
+s(thi\_mean\_t0\_3d):primiFx1 & 0.3145 & 0.0862 & 3.65 & 0.0003\\
+s(days\_in\_milk\_):multiFx1 & 2.6245 & 0.3882 & 6.76 & $<$ 1e-10\\
+s(days\_in\_milk\_):primiFx1 & 2.8048 & 0.5719 & 4.90 & $<$ 1e-06\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.4361 & & & \\
+$\sigma_\iota$ & 1.0490 & & & \\
+$\sigma_\phi$ & 2.6129 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.5158 & & & \\
+s(days\_in\_milk\_):primi & 7.2800 & & & \\
+s(days\_in\_milk\_):multi & 8.4933 & & & \\
+s(thi\_mean\_t0\_3d):primi & 0.8292 & & & \\
+Residual & 3.0456 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: Milk Yield - 2011-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_diagnostics.png}
+    \caption[]{Original Braunvieh: Milk Yield - 2011-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/ob_milk_after2010/ob_milk_after2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: Milk Yield - 2011 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+\section{Original Braunvieh: ECM Yield}
+\subsection{Full Period: 1982-2023}\label{model:ob_ecm_full}
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 15.8947 & 0.4193 & 37.9121 & $<$ 0.0001 \\ 
+      parityprimiparous & -3.0178 & 0.0093 & -325.6942 & $<$ 0.0001 \\ 
+      year1983 & 0.5663 & 0.2861 & 1.9794 & 0.0478 \\ 
+      year1984 & 1.2563 & 0.3953 & 3.1781 & 0.0015 \\ 
+      year1985 & 1.5213 & 0.4486 & 3.3913 & 0.0007 \\ 
+      year1986 & 1.2508 & 0.4344 & 2.8793 & 0.0040 \\ 
+      year1987 & 0.9772 & 0.4346 & 2.2487 & 0.0245 \\ 
+      year1988 & 0.7522 & 0.4336 & 1.7348 & 0.0828 \\ 
+      year1989 & 1.1497 & 0.4326 & 2.6574 & 0.0079 \\ 
+      year1990 & 1.3966 & 0.4344 & 3.2152 & 0.0013 \\ 
+      year1991 & 1.4858 & 0.4377 & 3.3948 & 0.0007 \\ 
+      year1992 & 1.7120 & 0.4426 & 3.8681 & 0.0001 \\ 
+      year1993 & 1.6722 & 0.4455 & 3.7537 & 0.0002 \\ 
+      year1994 & 1.4916 & 0.4446 & 3.3549 & 0.0008 \\ 
+      year1995 & 1.5158 & 0.4423 & 3.4268 & 0.0006 \\ 
+      year1996 & 1.5117 & 0.4432 & 3.4106 & 0.0006 \\ 
+      year1997 & 1.8394 & 0.4439 & 4.1439 & $<$ 0.0001 \\ 
+      year1998 & 2.3000 & 0.4511 & 5.0982 & $<$ 0.0001 \\ 
+      year1999 & 2.2123 & 0.4505 & 4.9107 & $<$ 0.0001 \\ 
+      year2000 & 2.2083 & 0.4492 & 4.9165 & $<$ 0.0001 \\ 
+      year2001 & 2.8655 & 0.4508 & 6.3568 & $<$ 0.0001 \\ 
+      year2002 & 2.7206 & 0.4526 & 6.0112 & $<$ 0.0001 \\ 
+      year2003 & 2.8360 & 0.4545 & 6.2393 & $<$ 0.0001 \\ 
+      year2004 & 3.5798 & 0.4559 & 7.8523 & $<$ 0.0001 \\ 
+      year2005 & 3.6846 & 0.4575 & 8.0532 & $<$ 0.0001 \\ 
+      year2006 & 3.5993 & 0.4484 & 8.0271 & $<$ 0.0001 \\ 
+      year2007 & 3.4139 & 0.4409 & 7.7426 & $<$ 0.0001 \\ 
+      year2008 & 3.6631 & 0.4360 & 8.4016 & $<$ 0.0001 \\ 
+      year2009 & 4.0687 & 0.4324 & 9.4088 & $<$ 0.0001 \\ 
+      year2010 & 4.0491 & 0.4566 & 8.8685 & $<$ 0.0001 \\ 
+      year2011 & 4.0704 & 0.4866 & 8.3654 & $<$ 0.0001 \\ 
+      year2012 & 4.2539 & 0.4575 & 9.2983 & $<$ 0.0001 \\ 
+      year2013 & 4.0249 & 0.4567 & 8.8127 & $<$ 0.0001 \\ 
+      year2014 & 4.2470 & 0.4520 & 9.3966 & $<$ 0.0001 \\ 
+      year2015 & 4.2237 & 0.4579 & 9.2233 & $<$ 0.0001 \\ 
+      year2016 & 4.5528 & 0.4511 & 10.0922 & $<$ 0.0001 \\ 
+      year2017 & 4.6712 & 0.4448 & 10.5015 & $<$ 0.0001 \\ 
+      year2018 & 5.2439 & 0.4446 & 11.7950 & $<$ 0.0001 \\ 
+      year2019 & 5.3966 & 0.4489 & 12.0229 & $<$ 0.0001 \\ 
+      year2020 & 5.4795 & 0.4475 & 12.2453 & $<$ 0.0001 \\ 
+      year2021 & 5.7850 & 0.4599 & 12.5794 & $<$ 0.0001 \\ 
+      year2022 & 5.5303 & 0.4515 & 12.2476 & $<$ 0.0001 \\ 
+      year2023 & 5.6858 & 0.4303 & 13.2131 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 8.3581 & 8.3581 & 214.1384 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 6.9115 & 6.9115 & 55.6429 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 13.6123 & 13.6123 & 99250.0134 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 12.6659 & 12.6659 & 6766.6483 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: ECM Yield - 1982-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & -0.3216 & 0.0774 & -4.16 & $<$ 1e-04\\
+s(thi\_mean\_t0\_3d):primiFx1 & -0.2918 & 0.1245 & -2.34 & 0.0191\\
+s(days\_in\_milk\_):multiFx1 & 0.2352 & 0.3329 & 0.71 & 0.4798\\
+s(days\_in\_milk\_):primiFx1 & 1.0344 & 0.5576 & 1.86 & 0.0636\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.2962 & & & \\
+$\sigma_\iota$ & 0.8772 & & & \\
+$\sigma_\phi$ & 2.4244 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.6803 & & & \\
+s(days\_in\_milk\_):primi & 5.8981 & & & \\
+s(days\_in\_milk\_):multi & 6.6445 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.4496 & & & \\
+Residual & 2.9534 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: ECM Yield - 1982-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_diagnostics.png}
+    \caption[]{Original Braunvieh: ECM Yield - 1982-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/ob_ecm_full/ob_ecm_full_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: ECM Yield - 1982 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsection{Split Period: Until 2010 - After 2010}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\subsubsection{Split Period: 1982 - 2010}\label{model:ob_ecm_before}
+
+\paragraph{Model Summary} \quad \\
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 15.7848 & 0.3067 & 51.4584 & $<$ 0.0001 \\ 
+      parityprimiparous & -2.9174 & 0.0070 & -417.3573 & $<$ 0.0001 \\ 
+      year1983 & 0.7892 & 0.1983 & 3.9793 & 0.0001 \\ 
+      year1984 & 1.4377 & 0.2480 & 5.7973 & $<$ 0.0001 \\ 
+      year1985 & 1.6877 & 0.3220 & 5.2417 & $<$ 0.0001 \\ 
+      year1986 & 1.4483 & 0.3141 & 4.6107 & $<$ 0.0001 \\ 
+      year1987 & 1.1982 & 0.3142 & 3.8135 & 0.0001 \\ 
+      year1988 & 0.9885 & 0.3149 & 3.1391 & 0.0017 \\ 
+      year1989 & 1.4451 & 0.3158 & 4.5766 & $<$ 0.0001 \\ 
+      year1990 & 1.6731 & 0.3146 & 5.3177 & $<$ 0.0001 \\ 
+      year1991 & 1.7756 & 0.3167 & 5.6067 & $<$ 0.0001 \\ 
+      year1992 & 2.0102 & 0.3191 & 6.3000 & $<$ 0.0001 \\ 
+      year1993 & 1.9638 & 0.3171 & 6.1928 & $<$ 0.0001 \\ 
+      year1994 & 1.7777 & 0.3178 & 5.5929 & $<$ 0.0001 \\ 
+      year1995 & 1.7674 & 0.3216 & 5.4948 & $<$ 0.0001 \\ 
+      year1996 & 1.8133 & 0.3296 & 5.5010 & $<$ 0.0001 \\ 
+      year1997 & 2.1509 & 0.3291 & 6.5368 & $<$ 0.0001 \\ 
+      year1998 & 2.6246 & 0.3306 & 7.9400 & $<$ 0.0001 \\ 
+      year1999 & 2.6036 & 0.3326 & 7.8279 & $<$ 0.0001 \\ 
+      year2000 & 2.5430 & 0.3251 & 7.8220 & $<$ 0.0001 \\ 
+      year2001 & 3.1967 & 0.3200 & 9.9888 & $<$ 0.0001 \\ 
+      year2002 & 3.1551 & 0.3198 & 9.8673 & $<$ 0.0001 \\ 
+      year2003 & 3.3240 & 0.3205 & 10.3719 & $<$ 0.0001 \\ 
+      year2004 & 4.0183 & 0.3274 & 12.2746 & $<$ 0.0001 \\ 
+      year2005 & 4.0225 & 0.3287 & 12.2364 & $<$ 0.0001 \\ 
+      year2006 & 3.9963 & 0.3313 & 12.0636 & $<$ 0.0001 \\ 
+      year2007 & 3.9453 & 0.3296 & 11.9687 & $<$ 0.0001 \\ 
+      year2008 & 4.2754 & 0.3341 & 12.7978 & $<$ 0.0001 \\ 
+      year2009 & 4.7774 & 0.3118 & 15.3210 & $<$ 0.0001 \\ 
+      year2010 & 4.8595 & 0.3156 & 15.3998 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 8.5846 & 8.5846 & 309.4526 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 7.0346 & 7.0346 & 59.6072 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 13.7201 & 13.7201 & 157593.6335 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 12.8167 & 12.8167 & 9483.4131 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: ECM Yield - 1982-2010 - GAMM model summary without random effect terms.}
+    \end{table}
+
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.2853 & 0.0617 & 4.63 & $<$ 1e-05\\
+s(thi\_mean\_t0\_3d):primiFx1 & 0.1390 & 0.1034 & 1.34 & 0.1788\\
+s(days\_in\_milk\_):multiFx1 & -0.8167 & 0.2614 & -3.12 & 0.0018\\
+s(days\_in\_milk\_):primiFx1 & 0.4526 & 0.4988 & 0.91 & 0.3642\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.1036 & & & \\
+$\sigma_\iota$ & 0.8472 & & & \\
+$\sigma_\phi$ & 2.3969 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.7271 & & & \\
+s(days\_in\_milk\_):primi & 5.5845 & & & \\
+s(days\_in\_milk\_):multi & 6.1963 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.3102 & & & \\
+Residual & 2.7254 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: ECM Yield - 1982-2010 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_diagnostics.png}
+    \caption[]{Original Braunvieh: ECM Yield - 1982-2010 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/ob_ecm_before2010/ob_ecm_before2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: ECM Yield - 1982 - 2010 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsubsection{Split Period: 2010 - 2023}\label{model:ob_ecm_after}
+
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 19.5455 & 0.1369 & 142.7818 & $<$ 0.0001 \\ 
+      parityprimiparous & -3.1985 & 0.0140 & -229.2422 & $<$ 0.0001 \\ 
+      year2012 & 0.2379 & 0.1405 & 1.6940 & 0.0903 \\ 
+      year2013 & 0.0226 & 0.1452 & 0.1560 & 0.8760 \\ 
+      year2014 & 0.3542 & 0.1507 & 2.3500 & 0.0188 \\ 
+      year2015 & 0.3058 & 0.1471 & 2.0794 & 0.0376 \\ 
+      year2016 & 0.5225 & 0.1557 & 3.3550 & 0.0008 \\ 
+      year2017 & 0.6787 & 0.1586 & 4.2804 & $<$ 0.0001 \\ 
+      year2018 & 1.3125 & 0.1506 & 8.7128 & $<$ 0.0001 \\ 
+      year2019 & 1.4008 & 0.1414 & 9.9084 & $<$ 0.0001 \\ 
+      year2020 & 1.5607 & 0.1607 & 9.7145 & $<$ 0.0001 \\ 
+      year2021 & 1.7424 & 0.1523 & 11.4371 & $<$ 0.0001 \\ 
+      year2022 & 1.3971 & 0.1530 & 9.1313 & $<$ 0.0001 \\ 
+      year2023 & 1.5928 & 0.1365 & 11.6652 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 7.9847 & 7.9847 & 155.1733 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 6.2505 & 6.2505 & 120.1621 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 13.5291 & 13.5291 & 75214.1566 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 12.7235 & 12.7235 & 6571.4484 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Original Braunvieh: ECM Yield - 2011-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.2387 & 0.0884 & 2.70 & 0.0069\\
+s(thi\_mean\_t0\_3d):primiFx1 & 0.4781 & 0.1054 & 4.54 & $<$ 1e-05\\
+s(days\_in\_milk\_):multiFx1 & 0.1442 & 0.3475 & 0.41 & 0.6781\\
+s(days\_in\_milk\_):primiFx1 & 1.4020 & 0.5138 & 2.73 & 0.0064\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.4364 & & & \\
+$\sigma_\iota$ & 1.1982 & & & \\
+$\sigma_\phi$ & 2.9291 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.5377 & & & \\
+s(days\_in\_milk\_):primi & 5.7883 & & & \\
+s(days\_in\_milk\_):multi & 6.5645 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.0934 & & & \\
+Residual & 3.4295 & & & \\
+\end{tabular}
+\caption[]{Original Braunvieh: ECM Yield - 2011-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_diagnostics.png}
+    \caption[]{Original Braunvieh: ECM Yield - 2011 - 2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/ob_ecm_after2010/ob_ecm_after2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Original Braunvieh: ECM Yield - 2011 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}

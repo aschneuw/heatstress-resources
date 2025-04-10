@@ -1,0 +1,11 @@
+%\chapter*{Dedication}
+\begingroup
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{empty}}{}{}
+\chapter*{} % Hidden chapter title
+\addcontentsline{toc}{chapter}{Dedication} % Add chapter to table of contents
+\endgroup
+
+
+\begin{center}
+     To my family and closest friends for their unwavering support and constant encouragement throughout all my personal and professional adventures.
+\end{center}

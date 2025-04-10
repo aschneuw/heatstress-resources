@@ -1,0 +1,82 @@
+%% ----------------------------------------------------------------
+%% Thesis.tex -- main
+%% ---------------------------------------------------------------- 
+
+\documentclass[a4paper, 10pt, oneside]{memoir}
+\usepackage{basilea}
+
+\usepackage{tikz-network}
+\usetikzlibrary{patterns}
+\usetikzlibrary{matrix}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{defi}{Definition}[section]
+\newtheorem{assu}{Assumption}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{ques}{Questions}[section]
+\newtheorem{lem}{Lemma}[section]
+\newcommand{\parenv}[1]{\left( {#1} \right)}
+\newcommand{\ceilenv}[1]{\left\lceil {#1} \right\rceil}
+\newcommand{\mathset}[1]{\left\{ {#1} \right\}}
+\newcommand{\sparenv}[1]{\left[ {#1} \right]}
+\newcommand{\Prob}[1]{\mathbb{P}\!\left[{#1} \right]}
+\newcommand{\Ex}[1]{\mathbb{E}\!\left[{#1} \right]}
+\newcommand{\Var}[1]{\mathbb{E}\!\left[({#1} -\Ex{#1})^2 \right]}
+\newcommand{\td}{\tilde{d}}
+\newcommand{\eqdef}{\triangleq}
+%% ----------------------------------------------------------------
+\begin{document}
+
+% for english use \selectlanguage{english}, for german use \selectlanguage{ngerman}
+\selectlanguage{english}
+
+\thesisfront
+\maketitle
+\pagestyle{thesis}
+%% ----------------------------------------------------------------
+%%\input{./front/dedication.tex}
+
+\input{./front/declaration}
+\input{./front/project}
+\input{./front/dedication}
+\input{./front/acknowledgment}
+%% ----------------------------------------------------------------
+\input{./front/abstract}
+%% ----------------------------------------------------------------
+\thesistoc
+%% ----------------------------------------------------------------
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+%\thesisnomencl
+%% ----------------------------------------------------------------
+\thesismain
+\input{./chapters/01_introduction.tex}
+\input{./chapters/02_background.tex}
+\input{./chapters/03_material_methods.tex}
+\input{./chapters/04_discussion.tex}
+\input{./chapters/05_conclusion.tex}
+%% ----------------------------------------------------------------
+\thesisbib
+
+\thesisappendix
+%\thesisbib
+\begin{appendices}
+	\input{./back/appendix}
+\end{appendices}
+
+%\bibliography{}
+%\todo{some citations need to be fixed}
+%% ----------------------------------------------------------------
+\thesisback
+\input{./back/backcover.tex}
+%\input{./Back/DeclarationOfAuthorship}
+%% ----------------------------------------------------------------
+\end{document}
+%% ----------------------------------------------------------------

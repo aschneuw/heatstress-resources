@@ -1,0 +1,66 @@
+\newpage
+\chapter{THI Table}
+The following Figure~\ref{fig:thi_table} is a THI table with an extended temperature range compared to the commonly available THI tables. We use the THI specification from \cite{nrc_1971}. The table facilitates the interpretation of our findings in Chapter~\ref{chap:results}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{thesis/figures/THI_NRC_extended.pdf}
+    \caption[]{THI Table with an extended temperature.}
+    \label{fig:thi_table}
+\end{figure}
+\newpage
+
+
+\chapter{Source Code}\label{appendix:source_code}
+\begin{center}
+The repository of this thesis is: \\
+\href{https://github.com/an-ethz/heat4milk-report}{https://github.com/an-ethz/heat4milk-report}
+\end{center}
+\section*{Notebooks}
+\begin{itemize}
+    \item \url{heat4milk-report/notebooks/preprocessing} Data Preprocessing (Section~\ref{sec:data})
+    \item \url{heat4milk-report/notebooks/models/gamm} Single Breed Models (Chapter~\ref{chap:results})
+    \item \url{heat4milk-report/notebooks/models/figures} Plotting Templates (Chapter~\ref{chap:results})
+    \item \url{heat4milk-report/notebooks/models/fixed_effect_econometrics} (Section~\ref{sec:discussion})
+\end{itemize}
+
+\section*{gamm4b}
+\begin{itemize}
+    \item \url{heat4milk-report/src/gamm4b/gamm4b_example.ipynb} Example notebook with dissected \textit{gamm4} and proposed modifications (Section\ref{sec:gamm4b})
+\end{itemize}
+
+\section*{gammJ}
+\begin{itemize}
+    \item \href{https://github.com/an-ethz/MixedModels.jl}{https://github.com/an-ethz/MixedModels.jl} Modified \textit{MixedModels.jl} (Section~\ref{sec:julia_modifications})
+    \item \url{heat4milk-report/src/gammJ/gammJ_v9_example.ipynb} Example notebook with dissected \textit{gamm4} and modified MixedModels.jl as fitting engine (Section~\ref{sec:gammJ}). This is the gammJ entrypoint.
+    \item \url{heat4milk-report/src/gammJ/trainGAM.jl} Model estimation called by \textit{gammJ} (Equation~\ref{eq:gamm_glmm})
+    \item \url{heat4milk-report/src/gammJ/postprocessGAM.jl} Julia Post-processing operations called by \textit{gammJ} (Section~\ref{sec:cholesky_scalable})
+\end{itemize}
+
+
+\chapter{Split Period: Until 2010 - After 2010}\label{appendix:split_period}
+\input{thesis/back/appendix/split_period.tex}
+
+
+\chapter{Models}\label{appendix:models}
+
+\newpage
+\input{./back/appendix/holstein.tex}
+\newpage
+\input{./back/appendix/swiss_fleckvieh.tex}
+\newpage
+\input{./back/appendix/brown_swiss.tex}
+\newpage
+\input{./back/appendix/simmental.tex}
+\newpage
+\input{./back/appendix/original_braunvieh.tex}
+\newpage
+\input{./back/appendix/jersey.tex}
+\newpage
+\input{./back/appendix/proposals.tex}
+
+
+
+
+
+
+

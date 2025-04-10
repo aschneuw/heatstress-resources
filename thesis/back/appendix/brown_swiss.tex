@@ -1,0 +1,741 @@
+\section{Brown Swiss: Milk Yield}
+\subsection{Full Period: 1982-2023}\label{model:bs_milk_full}
+\paragraph{Model Summary} \quad \\
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 12.9694 & 0.7576 & 17.1190 & $<$ 0.0001 \\ 
+      parityprimiparous & -2.5964 & 0.0086 & -301.9207 & $<$ 0.0001 \\ 
+      year1983 & 1.9968 & 0.5636 & 3.5432 & 0.0004 \\ 
+      year1984 & 2.5867 & 0.7005 & 3.6927 & 0.0002 \\ 
+      year1985 & 3.0365 & 0.7138 & 4.2538 & $<$ 0.0001 \\ 
+      year1986 & 3.0073 & 0.7181 & 4.1878 & $<$ 0.0001 \\ 
+      year1987 & 2.8618 & 0.7298 & 3.9212 & 0.0001 \\ 
+      year1988 & 2.8946 & 0.7369 & 3.9279 & 0.0001 \\ 
+      year1989 & 3.4588 & 0.7441 & 4.6483 & $<$ 0.0001 \\ 
+      year1990 & 3.6510 & 0.7641 & 4.7781 & $<$ 0.0001 \\ 
+      year1991 & 3.9590 & 0.7684 & 5.1519 & $<$ 0.0001 \\ 
+      year1992 & 4.0727 & 0.7695 & 5.2926 & $<$ 0.0001 \\ 
+      year1993 & 4.1564 & 0.7719 & 5.3844 & $<$ 0.0001 \\ 
+      year1994 & 4.1695 & 0.7816 & 5.3344 & $<$ 0.0001 \\ 
+      year1995 & 4.3510 & 0.7962 & 5.4648 & $<$ 0.0001 \\ 
+      year1996 & 4.3577 & 0.7996 & 5.4499 & $<$ 0.0001 \\ 
+      year1997 & 4.9766 & 0.8017 & 6.2072 & $<$ 0.0001 \\ 
+      year1998 & 5.6956 & 0.8013 & 7.1077 & $<$ 0.0001 \\ 
+      year1999 & 5.5569 & 0.8014 & 6.9344 & $<$ 0.0001 \\ 
+      year2000 & 5.7601 & 0.8018 & 7.1842 & $<$ 0.0001 \\ 
+      year2001 & 6.4392 & 0.8024 & 8.0250 & $<$ 0.0001 \\ 
+      year2002 & 6.6584 & 0.7975 & 8.3487 & $<$ 0.0001 \\ 
+      year2003 & 6.9133 & 0.7978 & 8.6650 & $<$ 0.0001 \\ 
+      year2004 & 7.4849 & 0.8011 & 9.3438 & $<$ 0.0001 \\ 
+      year2005 & 7.4077 & 0.8009 & 9.2494 & $<$ 0.0001 \\ 
+      year2006 & 7.4445 & 0.8009 & 9.2951 & $<$ 0.0001 \\ 
+      year2007 & 7.4704 & 0.8002 & 9.3360 & $<$ 0.0001 \\ 
+      year2008 & 7.7316 & 0.8007 & 9.6564 & $<$ 0.0001 \\ 
+      year2009 & 7.9143 & 0.8012 & 9.8778 & $<$ 0.0001 \\ 
+      year2010 & 7.8865 & 0.8044 & 9.8047 & $<$ 0.0001 \\ 
+      year2011 & 8.1415 & 0.8138 & 10.0046 & $<$ 0.0001 \\ 
+      year2012 & 8.4769 & 0.8247 & 10.2784 & $<$ 0.0001 \\ 
+      year2013 & 8.2752 & 0.8316 & 9.9513 & $<$ 0.0001 \\ 
+      year2014 & 8.6468 & 0.8244 & 10.4891 & $<$ 0.0001 \\ 
+      year2015 & 8.7346 & 0.8189 & 10.6665 & $<$ 0.0001 \\ 
+      year2016 & 8.9358 & 0.8185 & 10.9170 & $<$ 0.0001 \\ 
+      year2017 & 9.4246 & 0.8234 & 11.4456 & $<$ 0.0001 \\ 
+      year2018 & 9.7763 & 0.8237 & 11.8692 & $<$ 0.0001 \\ 
+      year2019 & 9.8116 & 0.8319 & 11.7948 & $<$ 0.0001 \\ 
+      year2020 & 9.9146 & 0.8356 & 11.8650 & $<$ 0.0001 \\ 
+      year2021 & 10.1348 & 0.8437 & 12.0121 & $<$ 0.0001 \\ 
+      year2022 & 9.9886 & 0.8499 & 11.7524 & $<$ 0.0001 \\ 
+      year2023 & 10.3002 & 0.8540 & 12.0610 & $<$ 0.0001 \\ 
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+      s(thi\_mean\_t0\_3d):paritymultiparous & 7.8318 & 7.8318 & 301.8503 & $<$ 0.0001 \\ 
+      s(thi\_mean\_t0\_3d):parityprimiparous & 5.6701 & 5.6701 & 39.5730 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):paritymultiparous & 14.6580 & 14.6580 & 115662.1015 & $<$ 0.0001 \\ 
+      s(days\_in\_milk\_t):parityprimiparous & 14.2764 & 14.2764 & 14852.7179 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Brown Swiss: Milk Yield - 1982-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & -0.0329 & 0.0751 & -0.44 & 0.6613\\
+s(thi\_mean\_t0\_3d):primiFx1 & -0.1460 & 0.0792 & -1.84 & 0.0653\\
+s(days\_in\_milk\_):multiFx1 & 3.1329 & 0.3803 & 8.24 & $<$ 1e-15\\
+s(days\_in\_milk\_):primiFx1 & 4.9629 & 0.5562 & 8.92 & $<$ 1e-18\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.5454 & &  & \\
+$\sigma_\iota$ & 1.0788 & & & \\
+$\sigma_\phi$ & 2.6594 & & & \\
+s(thi\_mean\_t0\_3d):multi & 1.1793 & & & \\
+s(days\_in\_milk\_):primi & 8.9385 & & & \\
+s(days\_in\_milk\_):multi & 8.7987 & & & \\
+s(thi\_mean\_t0\_3d):primi & 0.7122 & & & \\
+Residual & 3.0960 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: Milk Yield - 1982-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_diagnostics.png}
+    \caption[]{Brown Swiss: Milk Yield - 1982-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/full/bs_milk_full/bs_milk_full_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: Milk Yield - 1982 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsection{Split Period: Until 2010 - After 2010}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\subsubsection{Split Period: 1982 - 2010}\label{model:bs_milk_before}
+\paragraph{Model Summary} \quad \\
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+\textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+    \hline
+    \hline
+  (Intercept) & 12.3247 & 0.4735 & 26.0294 & $<$ 0.0001 \\ 
+  parityprimiparous & -2.4485 & 0.0075 & -325.8224 & $<$ 0.0001 \\ 
+  year1983 & 2.3555 & 0.2880 & 8.1793 & $<$ 0.0001 \\ 
+  year1984 & 3.0902 & 0.3440 & 8.9824 & $<$ 0.0001 \\ 
+  year1985 & 3.5151 & 0.3664 & 9.5927 & $<$ 0.0001 \\ 
+  year1986 & 3.4948 & 0.4159 & 8.4025 & $<$ 0.0001 \\ 
+  year1987 & 3.3965 & 0.4621 & 7.3505 & $<$ 0.0001 \\ 
+  year1988 & 3.4378 & 0.4688 & 7.3334 & $<$ 0.0001 \\ 
+  year1989 & 4.0267 & 0.4867 & 8.2734 & $<$ 0.0001 \\ 
+  year1990 & 4.2713 & 0.4891 & 8.7333 & $<$ 0.0001 \\ 
+  year1991 & 4.6013 & 0.4934 & 9.3264 & $<$ 0.0001 \\ 
+  year1992 & 4.7541 & 0.4960 & 9.5850 & $<$ 0.0001 \\ 
+  year1993 & 4.8388 & 0.5027 & 9.6262 & $<$ 0.0001 \\ 
+  year1994 & 4.8777 & 0.5096 & 9.5718 & $<$ 0.0001 \\ 
+  year1995 & 5.0237 & 0.5100 & 9.8508 & $<$ 0.0001 \\ 
+  year1996 & 5.0527 & 0.5128 & 9.8541 & $<$ 0.0001 \\ 
+  year1997 & 5.6594 & 0.5195 & 10.8943 & $<$ 0.0001 \\ 
+  year1998 & 6.3969 & 0.5163 & 12.3888 & $<$ 0.0001 \\ 
+  year1999 & 6.3501 & 0.5144 & 12.3444 & $<$ 0.0001 \\ 
+  year2000 & 6.5902 & 0.5145 & 12.8081 & $<$ 0.0001 \\ 
+  year2001 & 7.3556 & 0.5128 & 14.3432 & $<$ 0.0001 \\ 
+  year2002 & 7.5783 & 0.5121 & 14.7999 & $<$ 0.0001 \\ 
+  year2003 & 7.8819 & 0.5125 & 15.3796 & $<$ 0.0001 \\ 
+  year2004 & 8.3994 & 0.5135 & 16.3576 & $<$ 0.0001 \\ 
+  year2005 & 8.3719 & 0.5238 & 15.9815 & $<$ 0.0001 \\ 
+  year2006 & 8.4540 & 0.5307 & 15.9291 & $<$ 0.0001 \\ 
+  year2007 & 8.5350 & 0.5307 & 16.0833 & $<$ 0.0001 \\ 
+  year2008 & 8.9487 & 0.5369 & 16.6667 & $<$ 0.0001 \\ 
+  year2009 & 9.2918 & 0.5435 & 17.0971 & $<$ 0.0001 \\ 
+  year2010 & 9.4000 & 0.5478 & 17.1585 & $<$ 0.0001 \\ 
+   \hline
+\textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+\hline
+\hline
+  s(thi\_mean\_t0\_3d):paritymultiparous & 8.5317 & 8.5317 & 348.8165 & $<$ 0.0001 \\ 
+  s(thi\_mean\_t0\_3d):parityprimiparous & 5.9995 & 5.9995 & 24.7061 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):paritymultiparous & 14.5636 & 14.5636 & 128068.7551 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):parityprimiparous & 14.0529 & 14.0529 & 17306.6859 & $<$ 0.0001 \\ 
+   \hline
+\end{tabular}
+\caption[]{Brown Swiss: Milk Yield - 1982-2010 - GAMM model summary without random effect terms.} 
+\end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.2406 & 0.0789 & 3.05 & 0.0023\\
+s(thi\_mean\_t0\_3d):primiFx1 & 0.1624 & 0.0793 & 2.05 & 0.0407\\
+s(days\_in\_milk\_):multiFx1 & 2.2987 & 0.3918 & 5.87 & $<$ 1e-08\\
+s(days\_in\_milk\_):primiFx1 & 3.1749 & 0.5430 & 5.85 & $<$ 1e-08\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.4405 & & & \\
+$\sigma_\iota$ & 1.0394 & & & \\
+$\sigma_\phi$ & 2.4162 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.8846 & & & \\
+s(days\_in\_milk\_):primi & 7.3526  & & & \\
+s(days\_in\_milk\_):multi & 7.7494 & & & \\
+s(thi\_mean\_t0\_3d):primi & 0.7307 & & & \\
+Residual & 2.8776 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: Milk Yield - 1982-2010 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_diagnostics.png}
+    \caption[]{Brown Swiss: Milk Yield - 1982-2010 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/before2010/bs_milk_before2010/bs_milk_before2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: Milk Yield - 1982 - 2010 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsubsection{Split Period: 2010 - 2023}\label{model:bs_milk_after}
+
+\paragraph{Model Summary} \quad \\
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+   \hline
+\textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+    \hline
+    \hline
+  (Intercept) & 21.2111 & 0.2414 & 87.8540 & $<$ 0.0001 \\ 
+  parityprimiparous & -2.8924 & 0.0156 & -185.6574 & $<$ 0.0001 \\ 
+  year2012 & 0.2441 & 0.2084 & 1.1714 & 0.2415 \\ 
+  year2013 & 0.0342 & 0.2784 & 0.1229 & 0.9022 \\ 
+  year2014 & 0.4650 & 0.3250 & 1.4306 & 0.1526 \\ 
+  year2015 & 0.5156 & 0.3134 & 1.6453 & 0.0999 \\ 
+  year2016 & 0.7994 & 0.3036 & 2.6328 & 0.0085 \\ 
+  year2017 & 1.1041 & 0.2984 & 3.7003 & 0.0002 \\ 
+  year2018 & 1.6417 & 0.2974 & 5.5193 & $<$ 0.0001 \\ 
+  year2019 & 1.8518 & 0.3009 & 6.1546 & $<$ 0.0001 \\ 
+  year2020 & 1.8166 & 0.3105 & 5.8508 & $<$ 0.0001 \\ 
+  year2021 & 2.0801 & 0.2758 & 7.5430 & $<$ 0.0001 \\ 
+  year2022 & 1.7860 & 0.3374 & 5.2928 & $<$ 0.0001 \\ 
+  year2023 & 2.0136 & 0.3992 & 5.0434 & $<$ 0.0001 \\ 
+   \hline
+\textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+\hline
+\hline
+  s(thi\_mean\_t0\_3d):paritymultiparous & 8.1345 & 8.1345 & 248.1362 & $<$ 0.0001 \\ 
+  s(thi\_mean\_t0\_3d):parityprimiparous & 6.1359 & 6.1359 & 53.3577 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):paritymultiparous & 14.7627 & 14.7627 & 96671.5767 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):parityprimiparous & 14.2234 & 14.2234 & 9759.0387 & $<$ 0.0001 \\ 
+   \hline
+\end{tabular}
+\caption[]{Brown Swiss: Milk Yield - 2011-2023 - GAMM model summary without random effect terms. } 
+\end{table} 
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.0611 & 0.0815 & 0.75 & 0.4535\\
+s(thi\_mean\_t0\_3d):primiFx1 & -0.1991 & 0.0940 & -2.12 & 0.0341\\
+s(days\_in\_milk\_):multiFx1 & 4.8333 & 0.3724 & 12.98 & $<$ 1e-37\\
+s(days\_in\_milk\_):primiFx1 & 5.2524 & 0.5628 & 9.33 & $<$ 1e-19\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.6594 & & & \\
+$\sigma_\iota$ & 1.1640 & & & \\
+$\sigma_\phi$ & 3.3349 & & & \\
+s(thi\_mean\_t0\_3d):multi & 1.6731 & & & \\
+s(days\_in\_milk\_):primi & 9.1749 & & & \\
+s(days\_in\_milk\_):multi & 10.8600 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.0195 & & & \\
+Residual & 3.5347 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: Milk Yield - 2011-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_diagnostics.png}
+    \caption[]{Brown Swiss: Milk Yield - 2011-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/milk/after2010/bs_milk_after2010/bs_milk_after2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: Milk Yield - 2011 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+\section{Brown Swiss: ECM Yield}
+\subsection{Full Period: 1982-2023}\label{model:bs_ecm_full}
+\paragraph{Model Summary} \quad \\
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+    \textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+       \hline
+       \hline
+      (Intercept) & 14.5118 & 0.8535 & 17.0028 & $<$ 0.0001 \\ 
+  parityprimiparous & -2.9261 & 0.0097 & -302.9145 & $<$ 0.0001 \\ 
+  year1983 & 2.1332 & 0.6325 & 3.3729 & 0.0007 \\ 
+  year1984 & 2.6187 & 0.7871 & 3.3272 & 0.0009 \\ 
+  year1985 & 3.1363 & 0.8022 & 3.9096 & 0.0001 \\ 
+  year1986 & 3.0575 & 0.8070 & 3.7887 & 0.0002 \\ 
+  year1987 & 2.8836 & 0.8204 & 3.5151 & 0.0004 \\ 
+  year1988 & 2.8943 & 0.8284 & 3.4937 & 0.0005 \\ 
+  year1989 & 3.5360 & 0.8366 & 4.2266 & $<$ 0.0001 \\ 
+  year1990 & 3.8219 & 0.8595 & 4.4468 & $<$ 0.0001 \\ 
+  year1991 & 4.1067 & 0.8646 & 4.7501 & $<$ 0.0001 \\ 
+  year1992 & 4.2306 & 0.8658 & 4.8865 & $<$ 0.0001 \\ 
+  year1993 & 4.2739 & 0.8685 & 4.9207 & $<$ 0.0001 \\ 
+  year1994 & 4.0330 & 0.8796 & 4.5849 & $<$ 0.0001 \\ 
+  year1995 & 4.2135 & 0.8966 & 4.6996 & $<$ 0.0001 \\ 
+  year1996 & 4.2852 & 0.9007 & 4.7578 & $<$ 0.0001 \\ 
+  year1997 & 4.8949 & 0.9033 & 5.4190 & $<$ 0.0001 \\ 
+  year1998 & 5.8103 & 0.9031 & 6.4340 & $<$ 0.0001 \\ 
+  year1999 & 5.5766 & 0.9031 & 6.1749 & $<$ 0.0001 \\ 
+  year2000 & 5.5808 & 0.9036 & 6.1764 & $<$ 0.0001 \\ 
+  year2001 & 6.5297 & 0.9042 & 7.2213 & $<$ 0.0001 \\ 
+  year2002 & 6.6744 & 0.8989 & 7.4254 & $<$ 0.0001 \\ 
+  year2003 & 6.8026 & 0.8992 & 7.5648 & $<$ 0.0001 \\ 
+  year2004 & 7.4423 & 0.9029 & 8.2427 & $<$ 0.0001 \\ 
+  year2005 & 7.4488 & 0.9029 & 8.2496 & $<$ 0.0001 \\ 
+  year2006 & 7.5081 & 0.9031 & 8.3140 & $<$ 0.0001 \\ 
+  year2007 & 7.4430 & 0.9024 & 8.2480 & $<$ 0.0001 \\ 
+  year2008 & 7.9538 & 0.9030 & 8.8083 & $<$ 0.0001 \\ 
+  year2009 & 8.0856 & 0.9036 & 8.9479 & $<$ 0.0001 \\ 
+  year2010 & 8.0415 & 0.9072 & 8.8641 & $<$ 0.0001 \\ 
+  year2011 & 8.3067 & 0.9179 & 9.0496 & $<$ 0.0001 \\ 
+  year2012 & 8.7580 & 0.9302 & 9.4156 & $<$ 0.0001 \\ 
+  year2013 & 8.4529 & 0.9378 & 9.0131 & $<$ 0.0001 \\ 
+  year2014 & 8.8439 & 0.9298 & 9.5112 & $<$ 0.0001 \\ 
+  year2015 & 8.9348 & 0.9238 & 9.6715 & $<$ 0.0001 \\ 
+  year2016 & 9.2377 & 0.9234 & 10.0036 & $<$ 0.0001 \\ 
+  year2017 & 9.7481 & 0.9290 & 10.4931 & $<$ 0.0001 \\ 
+  year2018 & 10.1761 & 0.9294 & 10.9496 & $<$ 0.0001 \\ 
+  year2019 & 10.2181 & 0.9391 & 10.8810 & $<$ 0.0001 \\ 
+  year2020 & 10.3778 & 0.9435 & 10.9995 & $<$ 0.0001 \\ 
+  year2021 & 10.6682 & 0.9527 & 11.1979 & $<$ 0.0001 \\ 
+  year2022 & 10.4038 & 0.9597 & 10.8405 & $<$ 0.0001 \\ 
+  year2023 & 10.8333 & 0.9643 & 11.2343 & $<$ 0.0001 \\  
+       \hline
+    \textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+    \hline
+    \hline
+    s(thi\_mean\_t0\_3d):paritymultiparous & 7.8150 & 7.8150 & 109.8428 & $<$ 0.0001 \\ 
+    s(thi\_mean\_t0\_3d):parityprimiparous & 6.1480 & 6.1480 & 164.9388 & $<$ 0.0001 \\ 
+    s(days\_in\_milk\_t):paritymultiparous & 13.6324 & 13.6324 & 91224.2937 & $<$ 0.0001 \\ 
+    s(days\_in\_milk\_t):parityprimiparous & 13.2448 & 13.2448 & 9763.6690 & $<$ 0.0001 \\ 
+       \hline
+    \end{tabular}
+    \caption[]{Brown Swiss: ECM Yield - 1982-2023 - GAMM model summary without random effect terms.}
+    \end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1& -0.2537 & 0.0841 & -3.02 & 0.0026\\
+s(thi\_mean\_t0\_3d):primiFx1 & -0.3068 & 0.0985 & -3.12 & 0.0018\\
+s(days\_in\_milk\_):multiFx1 & 0.2544 & 0.3388 & 0.75 & 0.4528\\
+s(days\_in\_milk\_):primiFx1 & 2.7607 & 0.4988 & 5.53 & $<$ 1e-07\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.6789 & &  & \\
+$\sigma_\iota$ & 1.1420 & & & \\
+$\sigma_\phi$ & 3.0825 & & & \\
+s(thi\_mean\_t0\_3d):multi & 1.3120 & & & \\
+s(days\_in\_milk\_):primi & 7.4999 & & & \\
+s(days\_in\_milk\_):multi & 7.2936 & & & \\
+s(thi\_mean\_t0\_3d):primi & 0.9745 & & & \\
+Residual & 3.4801 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: ECM Yield - 1982-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_diagnostics.png}
+    \caption[]{Brown Swiss: ECM Yield - 1982-2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/full/bs_ecm_full/bs_ecm_full_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: ECM Yield - 1982 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsection{Split Period: Until 2010 - After 2010}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\subsubsection{Split Period: 1982 - 2010}\label{model:bs_ecm_before}
+
+\paragraph{Model Summary} \quad \\
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+\textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+    \hline
+    \hline
+  (Intercept) & 13.9011 & 0.6172 & 22.5214 & $<$ 0.0001 \\ 
+  parityprimiparous & -2.7288 & 0.0073 & -375.8442 & $<$ 0.0001 \\ 
+  year1983 & 2.3196 & 0.3994 & 5.8081 & $<$ 0.0001 \\ 
+  year1984 & 2.9601 & 0.5001 & 5.9189 & $<$ 0.0001 \\ 
+  year1985 & 3.4533 & 0.5081 & 6.7972 & $<$ 0.0001 \\ 
+  year1986 & 3.3724 & 0.5674 & 5.9435 & $<$ 0.0001 \\ 
+  year1987 & 3.2407 & 0.5760 & 5.6260 & $<$ 0.0001 \\ 
+  year1988 & 3.2757 & 0.6297 & 5.2018 & $<$ 0.0001 \\ 
+  year1989 & 3.9381 & 0.6372 & 6.1799 & $<$ 0.0001 \\ 
+  year1990 & 4.2920 & 0.6390 & 6.7167 & $<$ 0.0001 \\ 
+  year1991 & 4.6150 & 0.6503 & 7.0969 & $<$ 0.0001 \\ 
+  year1992 & 4.7898 & 0.6440 & 7.4375 & $<$ 0.0001 \\ 
+  year1993 & 4.8166 & 0.6435 & 7.4849 & $<$ 0.0001 \\ 
+  year1994 & 4.5930 & 0.6392 & 7.1860 & $<$ 0.0001 \\ 
+  year1995 & 4.7651 & 0.6402 & 7.4435 & $<$ 0.0001 \\ 
+  year1996 & 4.9309 & 0.6414 & 7.6879 & $<$ 0.0001 \\ 
+  year1997 & 5.5129 & 0.6414 & 8.5948 & $<$ 0.0001 \\ 
+  year1998 & 6.4300 & 0.6504 & 9.8868 & $<$ 0.0001 \\ 
+  year1999 & 6.2791 & 0.6555 & 9.5797 & $<$ 0.0001 \\ 
+  year2000 & 6.3019 & 0.6587 & 9.5676 & $<$ 0.0001 \\ 
+  year2001 & 7.3628 & 0.6536 & 11.2656 & $<$ 0.0001 \\ 
+  year2002 & 7.4858 & 0.6503 & 11.5106 & $<$ 0.0001 \\ 
+  year2003 & 7.7060 & 0.6596 & 11.6835 & $<$ 0.0001 \\ 
+  year2004 & 8.2838 & 0.6477 & 12.7905 & $<$ 0.0001 \\ 
+  year2005 & 8.3527 & 0.6448 & 12.9545 & $<$ 0.0001 \\ 
+  year2006 & 8.3868 & 0.6387 & 13.1301 & $<$ 0.0001 \\ 
+  year2007 & 8.4348 & 0.6407 & 13.1652 & $<$ 0.0001 \\ 
+  year2008 & 9.0647 & 0.6390 & 14.1859 & $<$ 0.0001 \\ 
+  year2009 & 9.4157 & 0.6510 & 14.4640 & $<$ 0.0001 \\ 
+  year2010 & 9.5503 & 0.6410 & 14.8993 & $<$ 0.0001 \\ 
+   \hline
+\textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+\hline
+\hline
+  s(thi\_mean\_t0\_3d):paritymultiparous & 8.5445 & 8.5445 & 171.0640 & $<$ 0.0001 \\ 
+  s(thi\_mean\_t0\_3d):parityprimiparous & 7.2808 & 7.2808 & 110.8468 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):paritymultiparous & 13.6110 & 13.6110 & 145596.5407 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):parityprimiparous & 13.1557 & 13.1557 & 16561.7603 & $<$ 0.0001 \\ 
+   \hline
+\end{tabular}
+\caption[]{Brown Swiss: ECM Yield - 1982-2010 - GAMM model summary without random effect terms.} 
+\end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1 & 0.3322 & 0.0725 & 4.58 & $<$ 1e-05\\
+s(thi\_mean\_t0\_3d):primiFx1 &  0.2115 & 0.0921 & 2.30 & 0.0216\\
+s(days\_in\_milk\_):multiFx1 & 0.4571 & 0.2996 & 1.53 & 0.1271\\
+s(days\_in\_milk\_):primiFx1 & -1.0489 & 0.4208 & -2.49 & 0.0127\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ & 2.53951 & & & \\
+$\sigma_\iota$ & 1.09642 & & & \\
+$\sigma_\phi$ & 2.78563 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.79665 & & & \\
+s(days\_in\_milk\_):primi & 5.75322 & & & \\
+s(days\_in\_milk\_):multi & 5.99473 & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.19425 & & & \\
+Residual & 3.18356 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: ECM Yield - 1982-2010 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_diagnostics.png}
+    \caption[]{Brown Swiss: ECM Yield - 1982-2010 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/before2010/bs_ecm_before2010/bs_ecm_before2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: ECM Yield - 1982 - 2010 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+
+\subsubsection{Split Period: 2010 - 2023}\label{model:bs_ecm_after}
+
+\paragraph{Model Summary} \quad \\
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+\textbf{A. parametric coefficients} & Estimate & Std. Error & t-value & p-value \\ 
+    \hline
+    \hline
+  (Intercept) & 23.4859 & 0.2774 & 84.6766 & $<$ 0.0001 \\ 
+  parityprimiparous & -3.3904 & 0.0179 & -189.6220 & $<$ 0.0001 \\ 
+  year2012 & 0.3216 & 0.2395 & 1.3429 & 0.1793 \\ 
+  year2013 & -0.0251 & 0.3195 & -0.0786 & 0.9374 \\ 
+  year2014 & 0.3655 & 0.3711 & 0.9849 & 0.3247 \\ 
+  year2015 & 0.3975 & 0.3590 & 1.1073 & 0.2682 \\ 
+  year2016 & 0.7377 & 0.3481 & 2.1191 & 0.0341 \\ 
+  year2017 & 1.0088 & 0.3421 & 2.9486 & 0.0032 \\ 
+  year2018 & 1.6322 & 0.3411 & 4.7847 & $<$ 0.0001 \\ 
+  year2019 & 1.8740 & 0.3446 & 5.4377 & $<$ 0.0001 \\ 
+  year2020 & 1.7913 & 0.3555 & 5.0392 & $<$ 0.0001 \\ 
+  year2021 & 2.1038 & 0.3165 & 6.6463 & $<$ 0.0001 \\ 
+  year2022 & 1.6923 & 0.3868 & 4.3751 & $<$ 0.0001 \\ 
+  year2023 & 1.9646 & 0.4575 & 4.2945 & $<$ 0.0001 \\  
+   \hline
+\textbf{B. smooth terms} & edf & Ref.df & F-value & p-value \\ 
+\hline
+\hline
+  s(thi\_mean\_t0\_3d):paritymultiparous & 8.1229 & 8.1229 & 143.3874 & $<$ 0.0001 \\ 
+  s(thi\_mean\_t0\_3d):parityprimiparous & 6.2808 & 6.2808 & 220.4726 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):paritymultiparous & 13.8166 & 13.8166 & 68629.0617 & $<$ 0.0001 \\ 
+  s(days\_in\_milk\_t):parityprimiparous & 13.1007 & 13.1007 & 5270.4166 & $<$ 0.0001 \\ 
+   \hline
+\end{tabular}
+\caption[]{Brown Swiss: ECM Yield - 2011-2023 - GAMM model summary without random effect terms.} 
+\end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}
+{l | r | r | r | r}
+\textbf{Smooth Term Fixed Effect} & Est. & SE & z & p\\
+\hline
+\hline
+s(thi\_mean\_t0\_3d):multiFx1&  -0.1276 & 0.0935 & -1.36 & 0.1723 \\
+s(thi\_mean\_t0\_3d):primiFx1 &  -0.4146 & 0.1111 & -3.73 & 0.0002 \\
+s(days\_in\_milk\_):multiFx1 & 0.9924 & 0.3473 & 2.86 & 0.0043\\
+s(days\_in\_milk\_):primiFx1 &  2.9394 & 0.5111 & 5.75 & $<$ 1e-08\\
+\hline
+\textbf{Variance Component} & Estimated $\sigma$ & & & \\
+\hline
+\hline
+$\sigma_\alpha$ &  2.7558 &   & & \\
+$\sigma_\iota$ & 1.2690 & & & \\
+$\sigma_\phi$ & 3.8693 & & & \\
+s(thi\_mean\_t0\_3d):multi &  1.9064& & & \\
+s(days\_in\_milk\_):primi & 7.3548 & & & \\
+s(days\_in\_milk\_):multi & 11.0965  & & & \\
+s(thi\_mean\_t0\_3d):primi & 1.2442 & & & \\
+Residual & 4.0650 & & & \\
+\end{tabular}
+\caption[]{Brown Swiss: ECM Yield - 2011-2023 - Mixed Model Summary - Smooth Terms and Random Effects.}
+\end{table}
+
+
+\paragraph{Model Diagnostics} \quad \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_diagnostics.png}
+    \caption[]{Brown Swiss: ECM Yield - 2011 - 2023 - Diagnostic Plot}
+\end{figure}
+
+\newpage
+\paragraph{THI Effect and Lactation Curve} \quad \\
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_thi_milk_combined.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_dim_milk_combined.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_thi_milk_primi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_dim_milk_primi.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_thi_milk_multi.png}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Optional space between the figures
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{thesis/figures/models/ecm/after2010/bs_ecm_after2010/bs_ecm_after2010_marginal_dim_milk_multi.png}
+    \end{subfigure}
+    \caption[]{Brown Swiss: ECM Yield - 2011 - 2023 - THI Effect and Lactation Curve}
+    \label{fig:main}
+\end{figure}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
